@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="156.7">
+<testcase classname="Register" name="guest user could register with valid data successfully" time="15.342">
+<failure message="expected [https://demo.nopcommerce.com/registerresult/1?returnUrl=/] but found [https://demo.nopcommerce.com/register?returnurl=%2F]" type="java.lang.AssertionError"><![CDATA[When navigate to homepage...................................................passed
+And click register button...................................................passed
+And fill data and submit....................................................passed
+Then Registration page......................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/registerresult/1?returnUrl=/] but found [https://demo.nopcommerce.com/register?returnurl=%2F]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefinitions.D01_registerStepDef.Registration_page(D01_registerStepDef.java:45)
+	at ✽.Registration page(file:///C:/Users/shalaby/IdeaProjects/demo.nopcommerce/src/main/resources/Features/F01_Register.feature:7)
+]]></failure>
+</testcase>
+<testcase classname="Login" name="guest user could Login with valid credentials" time="9.438">
+<system-out><![CDATA[Given go to homepage........................................................passed
+When click login tab........................................................passed
+And enter username and password.............................................passed
+And click LOGIN button......................................................passed
+Then login page.............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Reset" name="User could reset his/her password successfully" time="10.15">
+<system-out><![CDATA[Given go to the homepage....................................................passed
+When click login Link text..................................................passed
+And click Forgot password link text.........................................passed
+And enter user email........................................................passed
+And click recover button....................................................passed
+Then recovery page..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="search" name="Logged User could search for any product" time="8.329">
+<system-out><![CDATA[Given navigate to the homepage..............................................passed
+When click on text box search...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="switch between currencies" name="guest user could switch between currencies [$, €]" time="8.707">
+<system-out><![CDATA[Given homepage..............................................................passed
+When select currency........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user could hover categories and select sub category" name="user could hover categories" time="11.639">
+<system-out><![CDATA[When user hover in page and select sub category.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Logged user could filter with color" name="Logged user could filter with color" time="10.623">
+<system-out><![CDATA[When user navigate in page and select Apparel...............................passed
+And user select shoes.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="select tag" name="user can select popular tag" time="10.513">
+<system-out><![CDATA[When user navigate to home page.............................................passed
+And User can click nice tag.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Shopping cart" name="user could add different products to Shopping cart" time="12.431">
+<system-out><![CDATA[When user navigate to product pages.........................................passed
+Then user push on add to shopping cart......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add product to wish list" name="user could open site add product to wish list" time="9.15">
+<system-out><![CDATA[When user push on add to wishlist...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add product to compare list" name="user could open site add product to compare list" time="9.516">
+<system-out><![CDATA[When user push on add to compare list.......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="successful Order" name="Create successful Order" time="15.607">
+<system-out><![CDATA[When navigate to product pages..............................................passed
+And select category books...................................................passed
+And choose books and adding to cart.........................................passed
+And get shopping cart.......................................................passed
+And agree with terms and checkout...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="user will be able to open sliders in home page" name="first slider are clickable on home page" time="11.057">
+<failure message="expected [https://demo.nopcommerce.com/ipone6s] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on first slider............................................passed
+Then first slider is displayed..............................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/ipone6s] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefinitions.D13_homeSlidersStepDef.frist_slider_is_displayed(D13_homeSlidersStepDef.java:19)
+	at ✽.first slider is displayed(file:///C:/Users/shalaby/IdeaProjects/demo.nopcommerce/src/main/resources/Features/F13_homeSliders.feature:5)
+]]></failure>
+</testcase>
+<testcase classname="user will be able to open sliders in home page" name="second slider are clickable on home page" time="13.425">
+<failure message="expected [https://demo.nopcommerce.com/nokia] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on second slider...........................................passed
+Then second slider is displayed.............................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.stepDefinitions.D13_homeSlidersStepDef.second_slider_is_displayed(D13_homeSlidersStepDef.java:30)
+	at ✽.second slider is displayed(file:///C:/Users/shalaby/IdeaProjects/demo.nopcommerce/src/main/resources/Features/F13_homeSliders.feature:9)
+]]></failure>
+</testcase>
+</testsuite>
